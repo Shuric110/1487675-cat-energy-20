@@ -1,0 +1,26 @@
+.order-form {
+  font-family: $font-alt;
+  font-size: 16px;
+  line-height: 18px;
+  color: $basic-black;
+}
+
+.order-form__text {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.order-form__fieldset {
+  color: $special-dark-grey;
+  text-transform: uppercase;
+}
+
+.order-form__fieldset legend {
+  text-transform: none;
+}
+
+.order-form__remark {
+  font-family: $font-base;
+  font-size: 14px;
+  line-height: 16px;
+}

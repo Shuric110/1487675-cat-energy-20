@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
-  </head>
+    <link href="css/style.css" rel="stylesheet">
+</head>
   <body>
     <header class="main-header">
       <div class="main-header__top">
@@ -23,21 +24,21 @@
 
     <main>
       <section class="order-form">
-        <h2 class="order-form__title">Подбор программы</h2>
+        <h2 class="order-form__title section-title">Подбор программы</h2>
         <form method="post" action="https://echo.htmlacademy.ru">
           <p class="order-form__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
           <fieldset class="order-form__fieldset order-form__fieldset--border">
             <ul class="order-form__fieldlist">
               <li class="order-form__fieldlist-item">
-                <label class="order-form__label input">
+                <label class="order-form__label">
                   Имя:*
-                  <input class="order-form__input" type="text" name="name" placeholder="Барсик" required>
+                  <input class="order-form__input input" type="text" name="name" placeholder="Барсик" required>
                 </label>
               </li>
               <li class="order-form__fieldlist-item">
-                <label class="order-form__label input">
+                <label class="order-form__label">
                   Вес (кг):*
-                  <input class="order-form__input" type="text" name="weight" placeholder="7" required>
+                  <input class="order-form__input input" type="text" name="weight" placeholder="7" required>
                 </label>
               </li>
               <li class="order-form__fieldlist-item">
@@ -52,15 +53,15 @@
             <ul class="order-form__fieldlist">
               <li class="order-form__fieldlist-item">
                 <input class="visually-hidden" id="order-form-goal-slim" type="radio" name="goal" value="slim" checked>
-                <label for="order-form-goal-slim">Похудение</label>
+                <label class="radio" for="order-form-goal-slim">Похудение</label>
               </li>
               <li class="order-form__fieldlist-item">
                 <input class="visually-hidden" id="order-form-goal-fit" type="radio" name="goal" value="fit">
-                <label for="order-form-goal-fit">Набор массы</label>
+                <label class="radio" for="order-form-goal-fit">Набор массы</label>
               </li>
               <li class="order-form__fieldlist-item">
                 <input class="visually-hidden" id="order-form-goal-unknown" type="radio" name="goal" value="unknown">
-                <label for="order-form-goal-unknown">Не знаю (нужен ваш совет)</label>
+                <label class="radio" for="order-form-goal-unknown">Не знаю (нужен ваш совет)</label>
               </li>
             </ul>
           </fieldset>
@@ -86,7 +87,7 @@
             <textarea class="order-form__textarea input" name="about-cat" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
           <fieldset class="order-form__fieldset">
-            <legend class="order-form__fieldset-legend">Доролнительно</legend>
+            <legend class="order-form__fieldset-legend">Дополнительно</legend>
             <ul class="order-form__fieldlist">
               <li class="order-form__fieldlist-item">
                 <input class="visually-hidden" id="order-form-extra-sweetener" type="checkbox" name="extra" value="sweetener" checked>

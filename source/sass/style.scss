@@ -1,1 +1,52 @@
-// Начните писать стили здесь
+@import "fonts";
+@import "vars";
+@import "blocks/main-header";
+@import "blocks/main-nav";
+@import "blocks/promo";
+@import "blocks/contacts";
+@import "blocks/button";
+@import "blocks/feature";
+@import "blocks/about-food";
+@import "blocks/section-title";
+@import "blocks/example";
+@import "blocks/catalog";
+@import "blocks/product-card";
+@import "blocks/extra-product-card";
+@import "blocks/promo-gift";
+@import "blocks/order-form";
+@import "blocks/input";
+@import "blocks/radio";
+@import "blocks/catalog-extra";
+
+body {
+  font-family: $font-base;
+  color: $special-dark-grey;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0;
+  padding: 0;
+  background-color: $basic-white;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
