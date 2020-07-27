@@ -1,7 +1,12 @@
 .promo-gift {
+  @include common-wrapper;
+
   background-color: $basic-green;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-position: center;
   background-repeat: no-repeat;
   color: $basic-white;
+  box-sizing: border-box;
+  min-height: 289px;
+  padding: 40px;
 }

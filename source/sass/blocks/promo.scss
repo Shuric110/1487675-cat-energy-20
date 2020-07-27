@@ -7,6 +7,12 @@
   background-repeat: no-repeat;
 }
 
+.promo__inner {
+  @include common-wrapper;
+  padding-top: 27px;
+  padding-bottom: 2px;
+}
+
 .promo__title {
   font-size: 36px;
   line-height: 36px;

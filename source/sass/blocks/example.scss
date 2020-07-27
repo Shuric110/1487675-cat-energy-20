@@ -2,6 +2,10 @@
   background-color: $basic-grey;
 }
 
+.example__inner {
+  @include common-wrapper;
+}
+
 .example__info-value {
   font-family: $font-alt;
   font-size: 24px;

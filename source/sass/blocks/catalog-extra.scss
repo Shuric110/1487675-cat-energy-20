@@ -1,7 +1,16 @@
+.catalog-extra {
+  @include wide-wrapper;
+}
+
 .catalog-extra__title {
   font-family: $font-alt;
   font-size: 24px;
   font-weight: normal;
   line-height: 24px;
   color: $basic-black;
+  padding-left: $mobile-margin;
+}
+
+.catalog-extra__list {
+  @include common-wrapper;
 }

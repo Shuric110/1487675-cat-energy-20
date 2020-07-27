@@ -1,11 +1,19 @@
 .order-form {
+  @include wide-wrapper;
+
   font-family: $font-alt;
   font-size: 16px;
   line-height: 18px;
   color: $basic-black;
 }
 
+.order-form__title {
+  @include common-wrapper;
+}
+
 .order-form__text {
+  @include common-wrapper;
+
   font-size: 14px;
   text-transform: uppercase;
 }
@@ -13,10 +21,21 @@
 .order-form__fieldset {
   color: $special-dark-grey;
   text-transform: uppercase;
+  border: none;
+  padding: 0;
 }
 
 .order-form__fieldset legend {
   text-transform: none;
+  padding-left: $mobile-margin;
+}
+
+.order-form__fieldlist {
+  @include common-wrapper;
+}
+
+.order-form__footer {
+  @include common-wrapper;
 }
 
 .order-form__remark {

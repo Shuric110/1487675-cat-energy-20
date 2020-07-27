@@ -1,3 +1,11 @@
+.contacts {
+  @include wide-wrapper;
+}
+
+.contacts__info {
+  @include common-wrapper;
+}
+
 .contacts__title {
   font-family: $font-alt;
   color: $special-very-dark-grey;
@@ -9,4 +17,9 @@
 .contacts__address {
   font-style: normal;
   line-height: 20px;
+}
+
+.contacts__map {
+  height: 362px;
+  background-color: $basic-grey;
 }
