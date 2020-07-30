@@ -1,1 +1,24 @@
-// Начните писать стили здесь
+@import "normalize";
+@import "fonts";
+@import "vars";
+@import "mixins";
+@import "common";
+@import "blocks/about-food";
+@import "blocks/button";
+@import "blocks/catalog";
+@import "blocks/catalog-extra";
+@import "blocks/contacts";
+@import "blocks/example";
+@import "blocks/extra-product-card";
+@import "blocks/feature";
+@import "blocks/features-list";
+@import "blocks/input";
+@import "blocks/main-header";
+@import "blocks/main-nav";
+@import "blocks/main-footer";
+@import "blocks/order-form";
+@import "blocks/product-card";
+@import "blocks/promo";
+@import "blocks/promo-gift";
+@import "blocks/radio";
+@import "blocks/section-title";

@@ -1,0 +1,14 @@
+.button {
+  display: block;
+  font-family: $font-alt;
+  color: $basic-white;
+  background-color: $basic-green;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  &--altcolor {
+    color: $special-dark-grey;
+    background-color: $basic-grey;
+  }
+}

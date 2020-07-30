@@ -1,0 +1,11 @@
+@mixin common-wrapper {
+  width: $mobile-content-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin wide-wrapper {
+  width: $mobile-full-width;
+  margin-left: auto;
+  margin-right: auto;
+}

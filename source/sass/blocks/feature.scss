@@ -1,0 +1,22 @@
+.feature {
+  background-color: $basic-grey;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.feature__title {
+  font-family: $font-alt;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+  color: $basic-black;
+}
+
+.feature__link {
+  font-family: $font-alt;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $basic-black;
+}

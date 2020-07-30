@@ -1,0 +1,25 @@
+.contacts {
+  @include wide-wrapper;
+}
+
+.contacts__info {
+  @include common-wrapper;
+}
+
+.contacts__title {
+  font-family: $font-alt;
+  color: $special-very-dark-grey;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.contacts__address {
+  font-style: normal;
+  line-height: 20px;
+}
+
+.contacts__map {
+  height: 362px;
+  background-color: $basic-grey;
+}
