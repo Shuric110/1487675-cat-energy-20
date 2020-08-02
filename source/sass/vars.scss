@@ -10,6 +10,7 @@ $special-dark-grey: #444444;
 $special-dark-grey-2: #222222;
 $special-very-dark-grey: #111111;
 $status-error: #ff8282;
+$promo-cat-background: #64a83b;
 
 $transparent: rgba(0, 0, 0, 0);
 
@@ -19,4 +20,17 @@ $font-alt: "Oswald", "Arial Narrow", sans-serif;
 $mobile-content-width: 280px;
 $mobile-margin: 20px;
 
+$tablet-content-width: 708px;
+$tablet-margin: 30px;
+
+$desktop-content-width: 1220px;
+$desktop-max-margin: 110px;
+$desktop-min-margin: 20px;
+
 $mobile-full-width: $mobile-content-width + $mobile-margin * 2;
+$tablet-full-width: $tablet-content-width + $tablet-margin * 2;
+$desktop-full-width: $desktop-content-width + $desktop-max-margin * 2;
+
+$tablet-min-width: $tablet-content-width + $tablet-margin * 2;
+$desktop-min-width: $desktop-content-width + $desktop-min-margin * 2;
+$mobile-max-width: $tablet-min-width - 1px;

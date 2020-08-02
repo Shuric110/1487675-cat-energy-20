@@ -1,7 +1,22 @@
-.main-header__top {
-  @include common-wrapper;
+.main-header {
+  padding: 0;
+
+  @media (min-width: $tablet-min-width) {
+    @include common-wrapper;
+    padding: 24px 0 32px;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    padding: 53px 0 32px;
+  }
 }
 
-.main-nav__item {
-  @include common-wrapper;
+.main-header__top {
+  @media (max-width: $mobile-max-width) {
+    @include common-wrapper;
+    padding: 11px 0 17px;
+  }
 }

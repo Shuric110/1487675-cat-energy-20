@@ -1,3 +1,49 @@
-.main-footer__lines {
+.main-footer__bottom {
   @include common-wrapper;
+
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-min-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 55px 0 61px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    padding: 57px 0 58px;
+  }
+}
+
+.main-footer__logo-text {
+  display: flex;
+  justify-content: center;
+}
+
+.main-footer__social-list {
+  list-style: none;
+  margin: 0;
+  padding: 20px 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+.main-footer__social-item {
+  width: 16px;
+  height: 16px;
+  background-image: url("https://via.placeholder.com/16x16");
+  margin: 0 17px;
+}
+
+.main-footer__academy {
+  font-size: 16px;
+  line-height: 18px;
+
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-min-width) {
+    justify-content: flex-end;
+  }
 }

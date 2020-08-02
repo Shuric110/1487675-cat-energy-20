@@ -1,11 +1,30 @@
 @mixin common-wrapper {
   width: $mobile-content-width;
+  box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
+
+  @media (min-width: $tablet-min-width) {
+    width: $tablet-content-width;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    width: $desktop-content-width;
+  }
 }
 
 @mixin wide-wrapper {
   width: $mobile-full-width;
   margin-left: auto;
   margin-right: auto;
+
+  @media (min-width: $tablet-min-width) {
+    width: 100%;
+    max-width: $tablet-full-width;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    width: 100%;
+    max-width: $desktop-full-width;
+  }
 }

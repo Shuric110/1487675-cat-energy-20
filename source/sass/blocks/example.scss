@@ -1,9 +1,32 @@
 .example {
-  background-color: $basic-grey;
+  position: relative;
+
+  @media (max-width: $mobile-max-width) {
+    background-color: $basic-grey;
+  }
+}
+
+.example__title {
+  @include common-wrapper;
 }
 
 .example__inner {
+  @media (min-width: $tablet-min-width) {
+    background: linear-gradient(to top, $basic-grey, $basic-grey 462px, $transparent 462px, $transparent);
+  }
+
+  @media (min-width: $desktop-min-width) {
+    background: $basic-grey;
+  }
+}
+
+.example__inner-wrapper {
   @include common-wrapper;
+
+  @media (min-width: $desktop-min-width) {
+    padding-right: $desktop-content-width - 440px;
+    min-height: 462px;
+  }
 }
 
 .example__info-value {
@@ -26,10 +49,18 @@
   color: $basic-black;
 }
 
-.example__slider-control {
+.example__preview-control {
   font-family: $font-alt;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   color: $basic-black;
+}
+
+.example__preview {
+  @media (min-width: $desktop-min-width) {
+    position: absolute;
+    top: 0;
+    left: 50%;
+  }
 }
