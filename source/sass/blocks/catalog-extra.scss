@@ -1,16 +1,37 @@
 .catalog-extra {
-  @include wide-wrapper;
+  @include common-wrapper;
 }
 
 .catalog-extra__title {
   font-family: $font-alt;
-  font-size: 24px;
   font-weight: normal;
-  line-height: 24px;
   color: $basic-black;
-  padding-left: $mobile-margin;
+  font-size: 24px;
+  line-height: 24px;
+
+  @media (min-width: $tablet-min-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.catalog-extra__inner {
+  @media (min-width: $desktop-min-width) {
+    display: flex;
+    align-items: flex-start;
+  }
 }
 
 .catalog-extra__list {
-  @include common-wrapper;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.catalog-extra__gift {
+  @media (min-width: $desktop-min-width) {
+    width: 245px;
+    margin-left: 79px;
+  }
 }
