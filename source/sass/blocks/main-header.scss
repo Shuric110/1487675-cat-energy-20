@@ -15,6 +15,10 @@
 }
 
 .main-header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
   @media (max-width: $mobile-max-width) {
     @include common-wrapper;
     padding: 11px 0 17px;
