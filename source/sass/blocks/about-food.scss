@@ -1,3 +1,61 @@
 .about-food {
   @include common-wrapper;
 }
+
+.about-food__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 20px;
+
+  @media (min-width: $tablet-min-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 60px;
+    grid-row-gap: 37px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 80px;
+  }
+}
+
+.about-food__item {
+  min-height: 60px;
+  position: relative;
+
+  @media (min-width: $tablet-min-width) {
+    width: 250px;
+    min-height: 280px;
+
+    &::after {
+      font-family: $font-alt;
+      font-size: 280px;
+      line-height: 280px;
+      color: $basic-grey;
+      z-index: -1;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    &:nth-child(1)::after {
+      content: "1";
+    }
+
+    &:nth-child(2)::after {
+      content: "2";
+    }
+
+    &:nth-child(3)::after {
+      content: "3";
+    }
+
+    &:nth-child(4)::after {
+      content: "4";
+    }
+  }
+}

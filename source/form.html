@@ -9,8 +9,7 @@
   <body>
     <header class="main-header">
       <div class="main-header__top">
-        <a class="main-header__logo-image" href="index.html"><img src="https://via.placeholder.com/34x38" width="34" height="38" alt="Кэт энерджи"></a>
-        <a class="main-header__logo-text" href="index.html"><img src="https://via.placeholder.com/101x18" width="101" height="18" alt="Кэт энерджи"></a>
+        <a class="main-header__logo-image" href="index.html"><img src="https://via.placeholder.com/191x38" width="191" height="38" alt="Кэт энерджи"></a>
         <button class="main-header__menu-button" type="button"><span class="visually-hidden">Открыть меню</span></button>
       </div>
       <h1 class="visually-hidden">Кэт энерджи - функциональное питание для котов</h1>
@@ -28,47 +27,49 @@
         <h2 class="order-form__title section-title">Подбор программы</h2>
         <form method="post" action="https://echo.htmlacademy.ru">
           <p class="order-form__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-          <fieldset class="order-form__fieldset order-form__fieldset--border">
-            <ul class="order-form__fieldlist">
-              <li class="order-form__fieldlist-item">
-                <label class="order-form__label">
-                  Имя:*
-                  <input class="order-form__input input" type="text" name="name" placeholder="Барсик" required>
-                </label>
-              </li>
-              <li class="order-form__fieldlist-item">
-                <label class="order-form__label">
-                  Вес (кг):*
-                  <input class="order-form__input input" type="text" name="weight" placeholder="7" required>
-                </label>
-              </li>
-              <li class="order-form__fieldlist-item">
-                <label class="order-form__label">
-                  Возраст (лет):
-                  <input class="order-form__input input" type="text" name="age" placeholder="7">
-                </label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="order-form__fieldset order-form__fieldset--border">
-            <ul class="order-form__fieldlist">
-              <li class="order-form__fieldlist-item">
-                <input class="visually-hidden" id="order-form-goal-slim" type="radio" name="goal" value="slim" checked>
-                <label class="radio" for="order-form-goal-slim">Похудение</label>
-              </li>
-              <li class="order-form__fieldlist-item">
-                <input class="visually-hidden" id="order-form-goal-fit" type="radio" name="goal" value="fit">
-                <label class="radio" for="order-form-goal-fit">Набор массы</label>
-              </li>
-              <li class="order-form__fieldlist-item">
-                <input class="visually-hidden" id="order-form-goal-unknown" type="radio" name="goal" value="unknown">
-                <label class="radio" for="order-form-goal-unknown">Не знаю (нужен ваш совет)</label>
-              </li>
-            </ul>
-          </fieldset>
+          <div class="order-form__common">
+            <fieldset class="order-form__fieldset order-form__fieldset--border">
+              <ul class="order-form__fieldlist order-form__fieldlist--text-inputs">
+                <li class="order-form__fieldlist-item">
+                  <label class="order-form__label">
+                    Имя:*
+                    <input class="order-form__input input" type="text" name="name" placeholder="Барсик" required>
+                  </label>
+                </li>
+                <li class="order-form__fieldlist-item">
+                  <label class="order-form__label">
+                    Вес (кг):*
+                    <input class="order-form__input input" type="text" name="weight" placeholder="7" required>
+                  </label>
+                </li>
+                <li class="order-form__fieldlist-item">
+                  <label class="order-form__label">
+                    Возраст (лет):
+                    <input class="order-form__input input" type="text" name="age" placeholder="7">
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="order-form__fieldset order-form__fieldset--border">
+              <ul class="order-form__fieldlist">
+                <li class="order-form__fieldlist-item">
+                  <input class="visually-hidden" id="order-form-goal-slim" type="radio" name="goal" value="slim" checked>
+                  <label class="radio" for="order-form-goal-slim">Похудение</label>
+                </li>
+                <li class="order-form__fieldlist-item">
+                  <input class="visually-hidden" id="order-form-goal-fit" type="radio" name="goal" value="fit">
+                  <label class="radio" for="order-form-goal-fit">Набор массы</label>
+                </li>
+                <li class="order-form__fieldlist-item">
+                  <input class="visually-hidden" id="order-form-goal-unknown" type="radio" name="goal" value="unknown">
+                  <label class="radio" for="order-form-goal-unknown">Не знаю (нужен ваш совет)</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
           <fieldset class="order-form__fieldset">
             <legend class="order-form__fieldset-legend">Контактные данные (владельца кота)</legend>
-            <ul class="order-form__fieldlist">
+            <ul class="order-form__fieldlist order-form__fieldlist--not-wrapped order-form__fieldlist--text-inputs">
               <li class="order-form__fieldlist-item">
                 <label class="order-form__label">
                   E-mail:*
@@ -85,7 +86,7 @@
           </fieldset>
           <fieldset class="order-form__fieldset">
             <legend class="order-form__fieldset-legend">Комментарий</legend>
-            <ul class="order-form__fieldlist">
+            <ul class="order-form__fieldlist order-form__fieldlist--not-wrapped">
               <li class="order-form__fieldlist-item">
                 <textarea class="order-form__textarea input" name="about-cat" placeholder="Расскажите обо всех повадках кота"></textarea>
               </li>
@@ -93,7 +94,7 @@
           </fieldset>
           <fieldset class="order-form__fieldset">
             <legend class="order-form__fieldset-legend">Дополнительно</legend>
-            <ul class="order-form__fieldlist">
+            <ul class="order-form__fieldlist order-form__fieldlist--not-wrapped order-form__fieldlist--checkboxes">
               <li class="order-form__fieldlist-item">
                 <input class="visually-hidden" id="order-form-extra-sweetener" type="checkbox" name="extra" value="sweetener" checked>
                 <label for="order-form-extra-sweetener">Сахарозаменитель</label>
@@ -122,13 +123,18 @@
 
     <footer class="main-footer">
       <section class="contacts">
-        <div class="contacts__info">
-          <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
-          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        <div class="contacts__info-wrapper">
+          <div class="contacts__info">
+            <h2 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
+            <address class="contacts__address">
+              <p>ул. Большая Конюшенная, д. 19/8</p>
+              <p>Санкт-Петербург</p>
+            </address>
+          </div>
         </div>
         <div class="contacts__map"></div>
       </section>
-      <div class="main-footer__lines">
+      <div class="main-footer__bottom">
         <div class="main-footer__logo-text">
           <a href="index.html"><img src="https://via.placeholder.com/128x24" width="128" height="24" alt="Кэт энерджи"></a>
         </div>

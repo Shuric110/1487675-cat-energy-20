@@ -1,7 +1,13 @@
 .section-title {
+  display: block;
   font-family: $font-alt;
   font-weight: normal;
   color: $basic-black;
   font-size: 36px;
   line-height: 36px;
+
+  @media (min-width: $tablet-min-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }

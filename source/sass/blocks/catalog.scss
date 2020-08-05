@@ -2,6 +2,34 @@
   @include wide-wrapper;
 }
 
+.catalog__title {
+  @include common-wrapper;
+}
+
+.catalog__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 19px;
+
+  @media (min-width: $tablet-min-width) {
+    @include common-wrapper;
+
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 60px;
+    grid-row-gap: 59px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 80px;
+    grid-row-gap: 63px;
+  }
+}
+
 .catalog__item {
   @include common-wrapper;
   padding-top: 20px;
