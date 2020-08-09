@@ -6,6 +6,10 @@
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+  text-align: center;
+  box-sizing: border-box;
+
+  padding: 7px 12px;
 
   &--altcolor {
     color: $special-dark-grey;

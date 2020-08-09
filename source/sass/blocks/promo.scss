@@ -37,12 +37,11 @@
 
 .promo__inner {
   @include common-wrapper;
-  padding-top: 27px;
+  padding: 27px 0 50px;
   box-sizing: border-box;
   position: relative;
 
   min-height: 480px;
-  padding-bottom: 50px;
 
   background-image: url("../img/index-can-mobile@1x.png");
   background-position: center calc(100% - 30px);
@@ -65,6 +64,9 @@
 .promo__title {
   font-size: 36px;
   line-height: 36px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0 5px;
   text-align: center;
 }
 
@@ -73,6 +75,8 @@
   line-height: 14px;
   text-align: center;
   text-transform: uppercase;
+  padding: 0 5px;
+  margin: 25px 0 0 0;
 }
 
 .promo__button {

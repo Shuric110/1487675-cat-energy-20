@@ -9,11 +9,17 @@
   <body class="body--index">
     <header class="main-header">
       <div class="main-header__top">
-        <a class="main-header__logo-image" href="index.html"><img src="https://via.placeholder.com/191x38" width="191" height="38" alt="Кэт энерджи"></a>
-        <button class="main-header__menu-button" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <a class="main-header__logo-image" href="index.html">
+          <picture>
+            <source media="(min-width: 1260px)" srcset="../img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="../img/logo-tablet.svg">
+            <img src="../img/logo-mobile.svg" width="191" height="38" alt="Кэт энерджи">
+          </picture>
+        </a>
+        <button class="main-header__menu-button main-header__menu-button--no-js" type="button"><span class="visually-hidden">Открыть меню</span></button>
       </div>
       <h1 class="visually-hidden">Кэт энерджи - функциональное питание для котов</h1>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--no-js">
         <ul class="main-nav__list">
           <li class="main-nav__item"><a href="index.html">Главная</a></li>
           <li class="main-nav__item"><a href="catalog.html">Каталог продукции</a></li>
@@ -43,7 +49,7 @@
         <article class="features-list__item feature">
           <h2 class="feature__title feature__title--pro">Набор массы</h2>
           <p class="feature__text">
-            Заработать авторитет среди дворовых котов и даже собак?
+            Заработать авторитет среди дворовых котов и&nbsp;даже собак?
             Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
           </p>
           <a class="feature__link" href="catalog.html">Каталог Pro</a>
@@ -132,5 +138,7 @@
         </a>
       </div>
     </footer>
+
+    <script src="js/cat-energy.js"></script>
   </body>
 </html>

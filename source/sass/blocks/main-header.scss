@@ -17,7 +17,9 @@
 .main-header__top {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+
+  height: 65px;
 
   @media (max-width: $mobile-max-width) {
     @include common-wrapper;
@@ -25,7 +27,79 @@
   }
 }
 
+.main-header__logo-image {
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.main-header__logo-image img {
+  @media (min-width: $tablet-min-width) {
+    width: 174px;
+    height: 52px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    width: 202px;
+    height: 59px;
+  }
+}
+
 .main-header__menu-button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 24px;
+    height: 1.5px;
+    background-color: $basic-black;
+
+    display: block;
+    position: absolute;
+    left: 4px;
+    top: 7px;
+
+    box-shadow: 0 8px 0 0 $basic-black, 0 16px 0 0 $basic-black;
+  }
+
+  &--open {
+    &::before,
+    &::after {
+      content: "";
+      width: 25px;
+      height: 1.5px;
+      background-color: $basic-black;
+      display: block;
+      position: absolute;
+      box-shadow: none;
+      left: 3px;
+      top: 15px;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &--no-js {
+    display: none;
+  }
+
   @media (min-width: $tablet-min-width) {
     display: none;
   }

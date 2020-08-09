@@ -5,6 +5,13 @@
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
+
+  display: none;
+
+  &--no-js,
+  &--open {
+    display: block;
+  }
 }
 
 .main-nav__list {
@@ -20,7 +27,7 @@
 
 .main-nav__item {
   @media (max-width: $mobile-max-width) {
-    @include common-wrapper;
+    border-top: 1px solid $special-grey-2;
   }
 
   @media (min-width: $tablet-min-width) {
@@ -33,5 +40,15 @@
   @media (min-width: $desktop-min-width) {
     font-size: 20px;
     line-height: 30px;
+  }
+}
+
+.main-nav__item a {
+  @media (max-width: $mobile-max-width) {
+    @include common-wrapper;
+    display: block;
+    min-height: 65px;
+    padding: 22px 15px 24px;
+    text-align: center;
   }
 }
