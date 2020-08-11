@@ -337,10 +337,11 @@
   @media (min-width: $tablet-min-width) {
     width: 34px;
     height: 34px;
-    margin: -17px;
+    margin: -17px 0 0;
     background-color: $basic-white;
     border-radius: 50%;
     border: 1px solid $special-grey;
+    transform: translateX(-50%);
 
     left: 50%;
 
