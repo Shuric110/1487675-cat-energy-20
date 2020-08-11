@@ -8,10 +8,15 @@
 
   margin-top: 0;
   margin-bottom: 0;
-  padding: 27px 0 33px;
+  padding: 27px 0 25px;
 
   @media (min-width: $tablet-min-width) {
     font-size: 60px;
     line-height: 60px;
+    padding: 44px 0 40px;
+  }
+
+  @media (min-width: $tablet-min-width) {
+    padding: 70px 0 40px;
   }
 }

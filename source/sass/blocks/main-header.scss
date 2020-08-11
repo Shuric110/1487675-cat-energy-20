@@ -7,6 +7,7 @@
 
     display: flex;
     justify-content: space-between;
+    align-items: bottom;
   }
 
   @media (min-width: $desktop-min-width) {
@@ -19,10 +20,9 @@
   justify-content: space-between;
   align-items: center;
 
-  height: 65px;
-
   @media (max-width: $mobile-max-width) {
     @include common-wrapper;
+    height: 65px;
     padding: 11px 0 17px;
   }
 }
@@ -39,6 +39,8 @@
 }
 
 .main-header__logo-image img {
+  display: block;
+
   @media (min-width: $tablet-min-width) {
     width: 174px;
     height: 52px;

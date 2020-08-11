@@ -14,7 +14,7 @@
   @media (min-width: $tablet-min-width) {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 60px;
-    grid-row-gap: 37px;
+    grid-row-gap: 80px;
   }
 
   @media (min-width: $desktop-min-width) {
@@ -26,6 +26,7 @@
 .about-food__item {
   position: relative;
 
+  box-sizing: border-box;
   min-height: 60px;
   padding: 0 0 0 80px;
 
@@ -58,8 +59,8 @@
   }
 
   @media (min-width: $tablet-min-width) {
-    width: 250px;
-    min-height: 280px;
+    width: 245px;
+    min-height: 227px;
     padding: 111px 0 0 0;
 
     &::before {
