@@ -103,16 +103,18 @@
   display: block;
 
   font-family: $font-alt;
-  font-size: 16px;
-  line-height: 16px;
   text-transform: uppercase;
   color: $basic-black;
 
+  font-size: 16px;
+  line-height: 16px;
   margin-top: 23px;
   border-top: 1px solid $special-grey;
   padding-top: 15px;
 
   @media (min-width: $tablet-min-width) {
+    font-size: 20px;
+    line-height: 30px;
     border-top: none;
     padding-top: none;
     margin-top: 48px;
@@ -120,5 +122,33 @@
 
   @media (min-width: $desktop-min-width) {
     margin-top: 23px;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    vertical-align: 2px;
+    width: 32px;
+    height: 10px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-image: url("../img/icon-right-arrow-long.svg");
+
+    margin-left: 16px;
+
+    @media (min-width: $tablet-min-width) {
+      margin-left: 26px;
+      vertical-align: 4px;
+    }
+  }
+
+  &:hover::after,
+  &:focus::after,
+  &:active::after {
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
