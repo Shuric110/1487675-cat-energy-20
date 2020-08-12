@@ -1,24 +1,30 @@
 .product-card {
+  @include common-wrapper;
+
+  display: flex;
+  flex-direction: column;
+
   @media (min-width: $tablet-min-width) {
     background: linear-gradient(to bottom, $transparent, $transparent 81px, $basic-grey 81px, $basic-grey);
     box-sizing: border-box;
     padding: 0 36px 40px;
     width: 324px;
-    min-height: 511px;
   }
 
   @media (min-width: $desktop-min-width) {
     width: 245px;
-    min-height: 511px;
   }
 }
 
 .product-card__main {
   display: flex;
   align-items: flex-start;
+  padding-bottom: 13px;
 
   @media (min-width: $tablet-min-width) {
     display: block;
+    padding-bottom: 33px;
+    margin-bottom: auto;
   }
 }
 
@@ -26,6 +32,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 
   height: 112px;
   width: 50%;
@@ -36,31 +43,75 @@
   }
 }
 
+.product-card__image img {
+  display: block;
+  max-width: none;
+  height: auto;
+
+  @media (min-width: $tablet-min-width) {
+    width: 324px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    width: 245px;
+  }
+}
+
+.product-card__info {
+  width: 50%;
+
+  @media (min-width: $tablet-min-width) {
+    width: 100%;
+  }
+}
+
 .product-card__title {
   font-family: $font-alt;
-  font-size: 16px;
-  line-height: 20px;
+  font-weight: normal;
   text-transform: uppercase;
   color: $special-dark-grey-2;
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 20px;
+  max-width: 80px;
+  padding-bottom: 18px;
 
   @media (min-width: $tablet-min-width) {
     font-size: 20px;
     line-height: 24px;
+    max-width: 150px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 34px;
+    padding-bottom: 14px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    padding-top: 46px;
   }
 }
 
 .product-card__description {
+  margin: 0;
+}
+
+.product-card__description-line {
+  display: flex;
+  justify-content: space-between;
   font-size: 12px;
   line-height: 16px;
   color: $special-dark-grey;
 
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 5px;
+  @media (min-width: $tablet-min-width) {
+    border-bottom: 1px solid $special-grey;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 7px 0 9px;
+  }
 }
 
-.product-card__description dd {
-  text-align: right;
+.product-card__description-line dd {
   margin: 0;
 }
 
