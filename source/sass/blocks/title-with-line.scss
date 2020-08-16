@@ -1,67 +1,67 @@
 .title-with-line {
-  display: block;
   width: fit-content;
 
   font-family: $font-alt;
   font-weight: normal;
   color: $basic-black;
 
-  font-size: 24px;
-  line-height: 24px;
   background-color: $basic-white;
-  margin: 0;
   padding: 0 22px 0 0;
 
   @media (min-width: $tablet-min-width) {
-    font-size: 36px;
-    line-height: 36px;
     padding: 0 40px;
   }
 
   @media (min-width: $desktop-min-width) {
     padding: 0 40px 0 0;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: -1;
+      height: 2px;
+      background-color: $basic-green;
+
+      margin-top: 25px;
+      left: 0;
+      width: calc(50% - #{$desktop-content-width / 2 + 40px});
+    }
   }
 }
 
-.title-with-line__lines {
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 2px;
-  z-index: -1;
+.title-with-line__title {
+  display: inline-block;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: normal;
+  margin: 0;
 
-  margin-top: 15px;
-
-  &::before,
-  &::after {
+  &::before {
+    content: "";
     display: block;
     position: absolute;
+    z-index: -1;
     height: 2px;
     background-color: $basic-green;
-  }
 
-  &::after {
-    content: "";
-    left: calc(50% - #{$mobile-content-width / 2});
+    left: calc(50vw - #{$mobile-content-width / 2});
     right: 0;
+    margin-top: 15px;
   }
 
   @media (min-width: $tablet-min-width) {
-    margin-top: 25px;
+    font-size: 36px;
+    line-height: 36px;
 
-    &::after {
+    &::before {
+      margin-top: 25px;
       left: 0;
     }
   }
 
   @media (min-width: $desktop-min-width) {
     &::before {
-      content: "";
-      left: 0;
-      width: calc(50% - #{$desktop-content-width / 2 + 40px});
-    }
-
-    &::after {
       left: calc(50% - #{$desktop-content-width / 2});
     }
   }
