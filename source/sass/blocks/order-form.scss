@@ -9,32 +9,59 @@
 }
 
 .order-form {
-  @include wide-wrapper;
+  border-top: 1px solid $special-grey-2x;
 
   font-family: $font-alt;
+  color: $basic-black;
+
   font-size: 16px;
   line-height: 18px;
-  color: $basic-black;
+
+  @media (min-width: $tablet-min-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .order-form__title {
   @include common-wrapper;
 }
 
-.order-form__text {
+.order-form__wrapper {
   @include common-wrapper;
-  font-size: 14px;
-  text-transform: uppercase;
-
   @include order-form-padding;
 }
 
+.order-form__text {
+  text-transform: uppercase;
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 18px;
+  max-width: 230px;
+
+  @media (min-width: $tablet-min-width) {
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 330px;
+  }
+}
+
 .order-form__common {
-  @include common-wrapper;
-  @include order-form-padding;
+  margin-top: 39px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 27px;
+
+  @media (min-width: $tablet-min-width) {
+    @include common-wrapper;
+    @include order-form-padding;
+
+    grid-row-gap: 72px;
+    margin-top: 66px;
+  }
 
   @media (min-width: $desktop-min-width) {
-    display: grid;
     grid-template-columns: 570px 570px;
     grid-column-gap: 80px;
   }
@@ -45,13 +72,29 @@
   text-transform: uppercase;
   border: none;
   padding: 0;
+  margin: 0;
+
+  &--border {
+    padding: 20px 0 22px;
+    border-top: 1px solid $special-grey-2x;
+    border-bottom: 1px solid $special-grey-2x;
+
+    @media (min-width: $tablet-min-width) {
+      border: 1px solid $special-grey-2x;
+      padding: 25px 28px;
+    }
+  }
+
+  &--titled {
+    margin-top: 27px;
+  }
 }
 
 .order-form__fieldset legend {
   @include common-wrapper;
   text-transform: none;
 
-  @include order-form-padding;
+/*  @include order-form-padding;*/
 }
 
 .order-form__fieldlist {
@@ -59,6 +102,12 @@
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
+
+  @media (max-width: $mobile-max-width) {
+    @include common-wrapper;
+    @include order-form-padding;
+  }
+
 
   &--not-wrapped {
     @include common-wrapper;
@@ -78,6 +127,12 @@
       grid-template-columns: repeat(auto-fill, 570px);
       grid-column-gap: 80px;
     }
+  }
+
+  &--radiobuttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 13px;
   }
 
   &--checkboxes {

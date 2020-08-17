@@ -1,19 +1,14 @@
 .title-with-line {
-  width: fit-content;
+/*  width: fit-content;*/
 
   font-family: $font-alt;
   font-weight: normal;
   color: $basic-black;
 
-  background-color: $basic-white;
-  padding: 0 22px 0 0;
-
   @media (min-width: $tablet-min-width) {
-    padding: 0 40px;
   }
 
   @media (min-width: $desktop-min-width) {
-    padding: 0 40px 0 0;
 
     &::before {
       content: "";
@@ -31,11 +26,14 @@
 }
 
 .title-with-line__title {
-  display: inline-block;
+  display: block;
+  width: fit-content;
   font-size: 24px;
   line-height: 24px;
   font-weight: normal;
   margin: 0;
+  background-color: $basic-white;
+  padding: 0 22px 0 0;
 
   &::before {
     content: "";
@@ -53,6 +51,7 @@
   @media (min-width: $tablet-min-width) {
     font-size: 36px;
     line-height: 36px;
+    padding: 0 40px;
 
     &::before {
       margin-top: 25px;
@@ -61,6 +60,8 @@
   }
 
   @media (min-width: $desktop-min-width) {
+    padding: 0 40px 0 0;
+
     &::before {
       left: calc(50% - #{$desktop-content-width / 2});
     }

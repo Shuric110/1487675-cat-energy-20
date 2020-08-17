@@ -1,6 +1,16 @@
 .input {
+  box-sizing: border-box;
   font-family: $font-alt;
   font-size: 16px;
   line-height: 18px;
   color: $special-dark-grey;
+  padding: 13px 15px 14px;
+  border: 1px solid $special-grey-2x;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-min-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px 19px 12px;
+  }
 }
