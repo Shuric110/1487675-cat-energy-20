@@ -1,16 +1,18 @@
 .features-list {
   @include common-wrapper;
 
-  margin-top: 22px;
+  padding-top: 22px;
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap: 20px;
 
   @media (min-width: $tablet-min-width) {
+    padding-top: 0;
     grid-row-gap: 20px;
   }
 
   @media (min-width: $desktop-min-width) {
+    padding-top: 82px;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 80px;
   }

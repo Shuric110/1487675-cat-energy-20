@@ -1,3 +1,7 @@
+.main-footer {
+  background-color: $basic-grey;
+}
+
 .main-footer__bottom {
   @include common-wrapper;
 
@@ -7,6 +11,7 @@
   @media (min-width: $tablet-min-width) {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     padding: 55px 0 61px;
   }
 
@@ -15,25 +20,66 @@
   }
 }
 
-.main-footer__logo-text {
+.main-footer__logo {
   display: flex;
   justify-content: center;
+
+  padding: 39px 0 32px;
+  border-bottom: 1px solid $special-grey;
+
+  @media (min-width: $tablet-min-width) {
+    border-bottom: none;
+    padding: 0;
+  }
 }
 
 .main-footer__social-list {
   list-style: none;
   margin: 0;
-  padding: 20px 0;
+  padding: 20px 0 21px;
 
   display: flex;
   justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid $special-grey;
+
+  @media (min-width: $tablet-min-width) {
+    border-bottom: none;
+    padding: 0;
+  }
 }
 
 .main-footer__social-item {
-  width: 16px;
-  height: 16px;
-  background-image: url("https://via.placeholder.com/16x16");
   margin: 0 17px;
+}
+
+.main-footer__logo a:hover,
+.main-footer__logo a:focus {
+  opacity: 0.8;
+}
+
+.main-footer__logo a:active {
+  opacity: 0.6;
+}
+
+.main-footer__link {
+  display: block;
+  fill: $special-grey-2;
+  color: $special-dark-grey;
+}
+
+.main-footer__link:hover,
+.main-footer__link:focus {
+  fill: $basic-green;
+}
+
+.main-footer__link:active {
+  fill: $basic-green;
+  opacity: 0.3;
+}
+
+.main-footer__link svg {
+  display: block;
 }
 
 .main-footer__academy {
@@ -41,9 +87,16 @@
   line-height: 18px;
 
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  margin: 22px 0;
 
   @media (min-width: $tablet-min-width) {
     justify-content: flex-end;
+    margin: 0;
+
+    & svg {
+      margin-left: 22px;
+    }
   }
 }

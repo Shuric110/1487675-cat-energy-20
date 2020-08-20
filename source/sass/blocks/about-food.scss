@@ -5,7 +5,7 @@
 .about-food__list {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 5px 0 42px;
 
   display: grid;
   grid-template-columns: 1fr;
@@ -14,7 +14,7 @@
   @media (min-width: $tablet-min-width) {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 60px;
-    grid-row-gap: 37px;
+    grid-row-gap: 80px;
   }
 
   @media (min-width: $desktop-min-width) {
@@ -24,12 +24,49 @@
 }
 
 .about-food__item {
-  min-height: 60px;
   position: relative;
 
+  box-sizing: border-box;
+  min-height: 60px;
+  padding: 0 0 0 80px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    background-color: $basic-green;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--nutritive::before {
+    background-image: url("../img/advantage-leaf@1x.png");
+  }
+
+  &--form::before {
+    background-image: url("../img/advantage-powder@1x.png");
+  }
+
+  &--feeding::before {
+    background-image: url("../img/advantage-dining@1x.png");
+  }
+
+  &--time::before {
+    background-image: url("../img/advantage-clock@1x.png");
+  }
+
   @media (min-width: $tablet-min-width) {
-    width: 250px;
-    min-height: 280px;
+    width: 245px;
+    min-height: 227px;
+    padding: 111px 0 0 0;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+    }
 
     &::after {
       font-family: $font-alt;
@@ -39,7 +76,7 @@
       z-index: -1;
       position: absolute;
       right: 0;
-      top: 0;
+      top: -35px;
     }
 
     &:nth-child(1)::after {

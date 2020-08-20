@@ -1,6 +1,15 @@
 .feature {
+  position: relative;
   background-color: $basic-grey;
   padding: 20px;
+
+  @media (min-width: $tablet-min-width) {
+    padding: 52px 275px 52px 52px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    padding: 52px;
+  }
 }
 
 .feature__title {
@@ -10,12 +19,136 @@
   line-height: 37px;
   text-transform: uppercase;
   color: $basic-black;
+  margin: 0;
+
+  padding: 10px 0 29px 71px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 0;
+    width: 70px;
+    height: 55px;
+    background-repeat: no-repeat;
+  }
+
+  &--slim::after {
+    background-image: url("../img/icon-cat-slim.svg"),
+      url("../img/icon-cat-ellipse.svg");
+    background-size: 36px 50px, 50px 50px;
+    background-position: 18px 1px, center;
+  }
+
+  &--pro::after {
+    background-image: url("../img/icon-cat-pro.svg"),
+      url("../img/icon-cat-ellipse.svg");
+    background-size: 67px 28px, 50px 50px;
+    background-position: 0 13px, center;
+  }
+
+  @media (min-width: $tablet-min-width) {
+    position: static;
+    padding: 15px 0 24px 0;
+
+    &::after {
+      left: auto;
+      right: 25px;
+      top: 80px;
+      width: 270px;
+      height: 223px;
+    }
+
+    &--slim::after {
+      background-size: 140px 192px, 200px 200px;
+      background-position: 65px 0, center;
+    }
+
+    &--pro::after {
+      background-size: 268px 112px, 200px 200px;
+      background-position: 0 60px, center;
+    }
+  }
+
+  @media (min-width: $desktop-min-width) {
+    position: relative;
+    padding: 15px 0 73px 162px;
+
+    &::after {
+      left: -20px;
+      right: auto;
+      top: -10px;
+      width: 135px;
+      height: 112px;
+    }
+
+    &--slim::after {
+      background-size: 70px 96px, 100px 100px;
+      background-position: 33px 0, center;
+    }
+
+    &--pro::after {
+      background-size: 134px 56px, 100px 100px;
+      background-position: 0 30px, center;
+    }
+  }
+}
+
+.feature__text {
+  margin: 0;
 }
 
 .feature__link {
+  display: block;
+
   font-family: $font-alt;
-  font-size: 16px;
-  line-height: 16px;
   text-transform: uppercase;
   color: $basic-black;
+
+  font-size: 16px;
+  line-height: 16px;
+  margin-top: 23px;
+  border-top: 1px solid $special-grey;
+  padding-top: 15px;
+
+  @media (min-width: $tablet-min-width) {
+    font-size: 20px;
+    line-height: 30px;
+    border-top: none;
+    padding-top: none;
+    margin-top: 48px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    margin-top: 23px;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    vertical-align: 2px;
+    width: 32px;
+    height: 10px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-image: url("../img/icon-right-arrow-long.svg");
+
+    margin-left: 16px;
+
+    @media (min-width: $tablet-min-width) {
+      margin-left: 26px;
+      vertical-align: 4px;
+    }
+  }
+
+  &:hover::after,
+  &:focus::after,
+  &:active::after {
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

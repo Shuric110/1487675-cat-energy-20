@@ -1,4 +1,6 @@
 .extra-product-card {
+  padding: 13px 0 19px;
+
   @media (min-width: $tablet-min-width) {
     display: flex;
     justify-content: space-between;
@@ -15,28 +17,33 @@
 .extra-product-card__title {
   font-family: $font-alt;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 16px;
   text-transform: uppercase;
   color: $special-dark-grey-2;
+
+  font-size: 16px;
+  line-height: 16px;
+  margin: 0 0 13px 0;
 
   @media (min-width: $tablet-min-width) {
     font-size: 20px;
     line-height: 20px;
+    margin: 0;
   }
 }
 
 .extra-product-card__price {
   color: $special-dark-grey;
-
   display: flex;
   justify-content: space-between;
+
   font-size: 14px;
   line-height: 14px;
+  margin: 0 0 15px 0;
 
   @media (min-width: $tablet-min-width) {
     font-size: 16px;
     line-height: 20px;
+    margin: 0;
   }
 
   @media (min-width: $desktop-min-width) {
@@ -63,7 +70,12 @@
 .extra-product-card__button {
   width: 100%;
 
+  @media (min-width: $tablet-min-width) {
+    margin-top: 23px;
+  }
+
   @media (min-width: $desktop-min-width) {
     width: 244px;
+    margin-top: 0;
   }
 }

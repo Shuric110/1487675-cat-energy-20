@@ -3,8 +3,17 @@
 @import "vars";
 @import "mixins";
 @import "common";
-@import "blocks/about-food";
+
+/* Common blocks */
 @import "blocks/button";
+@import "blocks/checkbox";
+@import "blocks/input";
+@import "blocks/radio";
+@import "blocks/section-title";
+@import "blocks/title-with-line";
+
+/* Content blocks */
+@import "blocks/about-food";
 @import "blocks/catalog";
 @import "blocks/catalog-extra";
 @import "blocks/contacts";
@@ -12,7 +21,6 @@
 @import "blocks/extra-product-card";
 @import "blocks/feature";
 @import "blocks/features-list";
-@import "blocks/input";
 @import "blocks/main-header";
 @import "blocks/main-nav";
 @import "blocks/main-footer";
@@ -20,5 +28,3 @@
 @import "blocks/product-card";
 @import "blocks/promo";
 @import "blocks/promo-gift";
-@import "blocks/radio";
-@import "blocks/section-title";

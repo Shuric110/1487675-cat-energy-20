@@ -1,11 +1,11 @@
-.radio {
+.checkbox {
   display: block;
   position: relative;
-  color: $special-dark-grey-2;
-  padding: 5px 0 5px 45px;
+  color: $basic-black;
+  padding: 5px 0 7px 44px;
 
   @media (min-width: $tablet-min-width) {
-    padding-left: 60px;
+    padding-left: 59px;
   }
 
   &::before {
@@ -16,7 +16,6 @@
     left: 0;
     top: 0;
     border: 1px solid $special-grey;
-    border-radius: 50%;
     width: 30px;
     height: 30px;
 
@@ -27,23 +26,19 @@
   }
 }
 
-.radio:hover::before,
-.radio:focus::before,
-.radio:active::before {
+.checkbox:hover::before,
+.checkbox:focus::before,
+.checkbox:active::before {
   border-color: $special-grey-3;
 }
 
-.radio:active {
+.checkbox:active {
   opacity: 0.3;
 }
 
-input:checked + .radio::before {
+input:checked + .checkbox::before {
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../img/icon-cat-ellipse.svg");
-  background-size: 14px 14px;
-
-  @media (min-width: $tablet-min-width) {
-    background-size: 18px 18px;
-  }
+  background-image: url("../img/icon-tick.svg");
+  background-size: 18px 14px;
 }
