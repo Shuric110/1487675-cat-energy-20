@@ -40,22 +40,39 @@
     background-color: $basic-green;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: 50px 50px;
   }
 
   &--nutritive::before {
     background-image: url("../img/advantage-leaf@1x.png");
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/advantage-leaf@2x.png");
+    }
   }
 
   &--form::before {
     background-image: url("../img/advantage-powder@1x.png");
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/advantage-powder@2x.png");
+    }
   }
 
   &--feeding::before {
     background-image: url("../img/advantage-dining@1x.png");
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/advantage-dining@2x.png");
+    }
   }
 
   &--time::before {
     background-image: url("../img/advantage-clock@1x.png");
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/advantage-clock@2x.png");
+    }
   }
 
   @media (min-width: $tablet-min-width) {

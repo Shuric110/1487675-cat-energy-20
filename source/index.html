@@ -102,10 +102,33 @@
             <div class="example__preview">
               <div class="example__preview-image-container">
                 <div class="example__preview-image example__preview-image--before">
-                  <img src="img/before-mobile@1x.png" width="320" height="240" alt="До похудения">
+                  <picture>
+                    <source media="(min-width: 1260px)" sizes="690px"
+                      srcset="img/before-desktop@1x.png 690w,
+                              img/before-desktop@2x.png 1380w">
+                    <source media="(min-width: 768px)" sizes="690px"
+                      srcset="img/before-tablet@1x.png 690w,
+                              img/before-tablet@2x.png 1380w">
+                    <img width="320" height="240" alt="До похудения"
+                      src="img/before-mobile@1x.png"
+                      srcset="img/before-mobile@2x.png 2x"
+                    >
+                  </picture>
                 </div>
                 <div class="example__preview-image example__preview-image--after">
-                  <img src="img/after-mobile@1x.png" width="320" height="240" alt="После похудения">
+                  <picture>
+                    <source media="(min-width: 1260px)" sizes="690px"
+                      srcset="img/after-desktop@1x.png 690w,
+                              img/after-desktop@2x.png 1380w">
+                    <source media="(min-width: 768px)" sizes="690px"
+                      srcset="img/after-tablet@1x.png 690w,
+                              img/after-tablet@2x.png 1380w">
+                    <img
+                      width="320" height="240" alt="После похудения"
+                      src="img/after-mobile@1x.png"
+                      srcset="img/after-mobile@2x.png 2x"
+                    >
+                  </picture>
                 </div>
               </div>
               <div class="example__preview-control">
