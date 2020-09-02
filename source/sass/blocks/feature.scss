@@ -50,11 +50,12 @@
 
   @media (min-width: $tablet-min-width) {
     position: static;
-    padding: 15px 0 24px 0;
+    padding: 24px 0 26px 0;
+    font-size: 36px;
 
     &::after {
       left: auto;
-      right: 25px;
+      right: 26px;
       top: 80px;
       width: 270px;
       height: 223px;
@@ -62,12 +63,12 @@
 
     &--slim::after {
       background-size: 140px 192px, 200px 200px;
-      background-position: 65px 0, center;
+      background-position: 64px 1px, center;
     }
 
     &--pro::after {
       background-size: 268px 112px, 200px 200px;
-      background-position: 0 60px, center;
+      background-position: 0 55px, center;
     }
   }
 
@@ -97,6 +98,12 @@
 
 .feature__text {
   margin: 0;
+
+  @media (min-width: $tablet-min-width) {
+    &--pro {
+      padding-right: 38px;
+    }
+  }
 }
 
 .feature__link {
@@ -117,8 +124,9 @@
     font-size: 20px;
     line-height: 30px;
     border-top: none;
-    padding-top: none;
-    margin-top: 48px;
+    padding-top: 0;
+    padding-bottom: 4px;
+    margin-top: 51px;
   }
 
   @media (min-width: $desktop-min-width) {

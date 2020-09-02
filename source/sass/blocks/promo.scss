@@ -65,9 +65,9 @@
   }
 
   @media (min-width: $tablet-min-width) {
-    min-height: 870px;
+    min-height: 842px;
     /* padding-bottom: 525px; */
-    padding: 62px 193px 525px 80px;
+    padding: 32px 193px 500px 82px;
     background-size: 709px auto;
     background-image: url("../img/index-can-tablet@1x.jpg");
     background-position: center bottom;
@@ -114,7 +114,7 @@
   @media (min-width: $tablet-min-width) {
     font-size: 20px;
     line-height: 20px;
-    margin: 40px 0 50px;
+    margin: 42px 0 48px;
   }
 }
 
@@ -131,5 +131,6 @@
     font-size: 20px;
     line-height: 24px;
     width: 244px;
+    padding: 15px 12px;
   }
 }

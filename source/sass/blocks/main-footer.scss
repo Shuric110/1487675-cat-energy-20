@@ -12,7 +12,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 55px 0 61px;
+    padding: 54px 0 61px;
   }
 
   @media (min-width: $desktop-min-width) {
@@ -20,16 +20,20 @@
   }
 }
 
+.main-footer__bottom svg {
+  display: block;
+}
+
 .main-footer__logo {
   display: flex;
   justify-content: center;
 
-  padding: 39px 0 27px;
+  padding: 39px 0 31px;
   border-bottom: 1px solid $special-grey;
 
   @media (min-width: $tablet-min-width) {
+    padding: 1px 0 0;
     border-bottom: none;
-    padding: 0;
   }
 }
 
@@ -45,12 +49,31 @@
 
   @media (min-width: $tablet-min-width) {
     border-bottom: none;
-    padding: 0;
+    padding: 0 0 2px 16px;
   }
 }
 
 .main-footer__social-item {
   margin: 0 19px;
+
+  @media (min-width: $tablet-min-width) {
+    margin: 0 14px;
+
+    &--vk svg {
+      width: 30px;
+      height: 22px;
+    }
+
+    &--insta svg {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--fb svg {
+      width: 13px;
+      height: 27px;
+    }
+  }
 }
 
 .main-footer__logo a:hover,
@@ -78,10 +101,6 @@
   opacity: 0.3;
 }
 
-.main-footer__link svg {
-  display: block;
-}
-
 .main-footer__academy {
   font-size: 16px;
   line-height: 18px;
@@ -94,9 +113,10 @@
   @media (min-width: $tablet-min-width) {
     justify-content: flex-end;
     margin: 0;
+    padding-right: 1px;
 
     & svg {
-      margin-left: 22px;
+      margin-left: 23px;
     }
   }
 }

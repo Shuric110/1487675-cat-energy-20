@@ -19,6 +19,10 @@
   padding-top: 28px;
   min-height: 114px;
 
+  @media (min-width: $tablet-min-width) {
+    padding: 64px 42px 57px 41px;
+  }
+
   @media (min-width: $desktop-min-width) {
     width: 570px;
     min-height: 201px;
@@ -36,18 +40,19 @@
   color: $special-very-dark-grey;
   text-transform: uppercase;
   font-weight: normal;
-  margin: 0;
-
   box-sizing: border-box;
-  width: 140px;
   padding-right: 10px;
+
+  margin: 0;
+  width: 140px;
   font-size: 16px;
   line-height: 20px;
 
   @media (min-width: $tablet-min-width) {
-    font-size: 20px;
-    line-height: 21px;
+    margin: 3px 0 0;
     width: 180px;
+    font-size: 20px;
+    line-height: 24px;
   }
 }
 
