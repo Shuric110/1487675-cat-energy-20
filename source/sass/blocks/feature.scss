@@ -27,7 +27,7 @@
   &::after {
     content: "";
     position: absolute;
-    left: -10px;
+    left: -8px;
     top: 0;
     width: 70px;
     height: 55px;
@@ -38,14 +38,14 @@
     background-image: url("../img/icon-cat-slim.svg"),
       url("../img/icon-cat-ellipse.svg");
     background-size: 36px 50px, 50px 50px;
-    background-position: 18px 1px, center;
+    background-position: 17px 1px, center;
   }
 
   &--pro::after {
     background-image: url("../img/icon-cat-pro.svg"),
       url("../img/icon-cat-ellipse.svg");
     background-size: 67px 28px, 50px 50px;
-    background-position: 0 13px, center;
+    background-position: 1px 15px, center;
   }
 
   @media (min-width: $tablet-min-width) {
@@ -108,9 +108,10 @@
 
   font-size: 16px;
   line-height: 16px;
-  margin-top: 23px;
+  margin-top: 22px;
   border-top: 1px solid $special-grey;
-  padding-top: 15px;
+  padding-top: 20px;
+  padding-bottom: 1px;
 
   @media (min-width: $tablet-min-width) {
     font-size: 20px;
@@ -129,12 +130,12 @@
     display: inline-block;
     vertical-align: 2px;
     width: 32px;
-    height: 10px;
+    height: 11px;
     background-repeat: no-repeat;
     background-position: left center;
     background-image: url("../img/icon-right-arrow-long.svg");
 
-    margin-left: 16px;
+    margin-left: 15px;
 
     @media (min-width: $tablet-min-width) {
       margin-left: 26px;

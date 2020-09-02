@@ -55,7 +55,7 @@
 
   background-size: 280px auto;
   background-image: url("../img/index-can-mobile@1x.png");
-  background-position: center calc(100% - 30px);
+  background-position: center calc(100% - 43px);
   background-repeat: no-repeat;
 
   text-align: center;
@@ -122,15 +122,14 @@
   font-size: 14px;
 
   @media (max-width: $mobile-max-width) {
-    font-size: 20px;
-    line-height: 24px;
-
     position: absolute;
     width: 100%;
     bottom: 0;
   }
 
   @media (min-width: $tablet-min-width) {
+    font-size: 20px;
+    line-height: 24px;
     width: 244px;
   }
 }

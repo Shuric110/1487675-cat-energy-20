@@ -1,5 +1,5 @@
 .main-header {
-  padding: 0;
+  padding: 0 0 1px;
 
   @media (min-width: $tablet-min-width) {
     @include common-wrapper;
@@ -22,8 +22,8 @@
 
   @media (max-width: $mobile-max-width) {
     @include common-wrapper;
-    height: 65px;
-    padding: 11px 0 17px;
+    min-height: 65px;
+    padding: 11px 0 16px;
   }
 }
 
@@ -54,18 +54,18 @@
 }
 
 .main-header__menu-button {
-  width: 32px;
+  width: 28px;
   height: 32px;
   border: none;
   padding: 0;
-  margin: 0;
+  margin: 4px 0 0;
   background-color: transparent;
   position: relative;
 
   &::before {
     content: "";
     width: 24px;
-    height: 1.5px;
+    height: 2px;
     background-color: $basic-black;
 
     display: block;
@@ -81,7 +81,7 @@
     &::after {
       content: "";
       width: 25px;
-      height: 1.5px;
+      height: 2px;
       background-color: $basic-black;
       display: block;
       position: absolute;

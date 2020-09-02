@@ -43,6 +43,7 @@
 .main-nav__item {
   @media (max-width: $mobile-max-width) {
     border-top: 1px solid $special-grey-2x;
+    font-weight: bold;
   }
 
   @media (min-width: $tablet-min-width) {
@@ -64,8 +65,8 @@
   @media (max-width: $mobile-max-width) {
     @include common-wrapper;
     display: block;
-    min-height: 65px;
-    padding: 22px 15px 24px;
+    min-height: 64px;
+    padding: 22px 15px 23px;
     text-align: center;
   }
 
