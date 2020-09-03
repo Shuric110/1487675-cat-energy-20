@@ -4,10 +4,11 @@
   font-size: 16px;
   line-height: 18px;
   color: $special-dark-grey;
-  padding: 13px 15px 14px;
+  padding: 13px 10px 12px 14px;
   border: 1px solid $special-grey-2x;
   text-transform: uppercase;
   position: relative;
+  min-width: 10px;
 
   @media (min-width: $tablet-min-width) {
     font-size: 20px;
@@ -29,7 +30,7 @@
   }
 
   &[class*=" input--icon-"] {
-    padding-right: 55px;
+    padding-right: 45px;
     background-repeat: no-repeat;
   }
 
