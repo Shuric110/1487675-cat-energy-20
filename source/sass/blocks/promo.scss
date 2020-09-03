@@ -32,11 +32,11 @@
       display: block;
       width: 50%;
       height: 696px;
-      top: 0;
+      top: -2px;
       left: 50%;
       background-size: 720px auto;
       background-image: url("../img/index-background-desktop@1x.jpg");
-      background-position: top left;
+      background-position: left top;
 
       @media (min-resolution: 1.5dppx) {
         background-image: url("../img/index-background-desktop@2x.jpg");
@@ -66,7 +66,6 @@
 
   @media (min-width: $tablet-min-width) {
     min-height: 842px;
-    /* padding-bottom: 525px; */
     padding: 32px 193px 500px 82px;
     background-size: 709px auto;
     background-image: url("../img/index-can-tablet@1x.jpg");
@@ -80,10 +79,10 @@
 
   @media (min-width: $desktop-min-width) {
     min-height: 585px;
-    padding: 114px 700px 0 80px;
+    padding: 82px 700px 0 75px;
     background-size: 552px auto;
     background-image: url("../img/index-can-desktop@1x.png");
-    background-position: 450px top;
+    background-position: 448px top;
 
     @media (min-resolution: 1.5dppx) {
       background-image: url("../img/index-can-desktop@2x.png");
@@ -116,6 +115,10 @@
     line-height: 20px;
     margin: 42px 0 48px;
   }
+
+  @media (min-width: $desktop-min-width) {
+    margin: 40px 0 52px;
+  }
 }
 
 .promo__button {
@@ -132,5 +135,9 @@
     line-height: 24px;
     width: 244px;
     padding: 15px 12px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    margin-left: 5px;
   }
 }

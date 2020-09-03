@@ -74,24 +74,24 @@
 
   @media (min-width: $desktop-min-width) {
     position: relative;
-    padding: 15px 0 73px 162px;
+    padding: 24px 0 75px 162px;
 
     &::after {
-      left: -20px;
+      left: -19px;
       right: auto;
-      top: -10px;
-      width: 135px;
+      top: -11px;
+      width: 139px;
       height: 112px;
     }
 
     &--slim::after {
       background-size: 70px 96px, 100px 100px;
-      background-position: 33px 0, center;
+      background-position: 34px 0, center;
     }
 
     &--pro::after {
       background-size: 134px 56px, 100px 100px;
-      background-position: 0 30px, center;
+      background-position: 0 26px, center;
     }
   }
 }
@@ -99,9 +99,13 @@
 .feature__text {
   margin: 0;
 
-  @media (min-width: $tablet-min-width) {
-    &--pro {
+  &--pro {
+    @media (min-width: $tablet-min-width) {
       padding-right: 38px;
+    }
+
+    @media (min-width: $desktop-min-width) {
+      padding-right: 0;
     }
   }
 }
@@ -123,14 +127,15 @@
   @media (min-width: $tablet-min-width) {
     font-size: 20px;
     line-height: 30px;
+    margin-top: 0;
     border-top: none;
-    padding-top: 0;
+    padding-top: 51px;
     padding-bottom: 4px;
-    margin-top: 51px;
   }
 
   @media (min-width: $desktop-min-width) {
-    margin-top: 23px;
+    padding-top: 26px;
+    padding-bottom: 6px;
   }
 
   &::after {

@@ -24,9 +24,9 @@
   }
 
   @media (min-width: $desktop-min-width) {
-    width: 570px;
+    width: 571px;
     min-height: 201px;
-    padding: 66px 85px 51px 76px;
+    padding: 64px 85px 51px 76px;
     background-color: $basic-white;
 
     position: absolute;
@@ -49,10 +49,15 @@
   line-height: 20px;
 
   @media (min-width: $tablet-min-width) {
-    margin: 3px 0 0;
+    padding: 3px 0 0;
     width: 180px;
     font-size: 20px;
     line-height: 24px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    padding: 2px 0 0;
+    line-height: 25px;
   }
 }
 

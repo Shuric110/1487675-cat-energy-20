@@ -22,6 +22,7 @@ mainNavOpenButton.addEventListener('click', function () {
   }
 
   const widthMediaQuery = window.matchMedia('(min-width: 768px)');
+  const exampleInnerElement = exampleElement.querySelector('.example__inner');
   const controlPinElement = exampleElement.querySelector('.example__preview-control-pin');
   const beforeButtonElement = exampleElement.querySelector('.example__preview-control-button--before');
   const afterButtonElement = exampleElement.querySelector('.example__preview-control-button--after');
@@ -46,6 +47,7 @@ mainNavOpenButton.addEventListener('click', function () {
       controlPinElement.offsetWidth;
       imageCropPosition = Math.round(controlPinElement.getBoundingClientRect().left + controlPinElement.offsetWidth / 2
         - imageContainerElement.getBoundingClientRect().left);
+      exampleInnerElement.style.setProperty("--slider-delta", imageCropPosition + 'px');
     }
 
     imageBeforeCropElement.style.width = imageCropPosition + 'px';

@@ -51,6 +51,10 @@
     border-bottom: none;
     padding: 0 0 2px 16px;
   }
+
+  @media (min-width: $desktop-min-width) {
+    padding: 0 0 3px 18px;
+  }
 }
 
 .main-footer__social-item {
@@ -118,5 +122,9 @@
     & svg {
       margin-left: 23px;
     }
+  }
+
+  @media (min-width: $desktop-min-width) {
+    padding: 1px 0 0;
   }
 }

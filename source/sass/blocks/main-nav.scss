@@ -61,24 +61,24 @@
 
 .main-nav__item a {
   box-sizing: border-box;
+  display: block;
 
   @media (max-width: $mobile-max-width) {
     @include common-wrapper;
-    display: block;
     min-height: 64px;
     padding: 22px 15px 23px;
     text-align: center;
   }
 
   @media (min-width: $tablet-min-width) {
-    display: block;
     padding: 0 0 8px;
     border-bottom-color: var(--border-color);
     border-bottom-width: 2px;
   }
 
   @media (min-width: $desktop-min-width) {
-    padding: 0 0 8px;
+    padding: 0 0 6px;
+    margin-bottom: 5px;
   }
 
   &:hover,
