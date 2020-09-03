@@ -4,7 +4,7 @@
   background-repeat: no-repeat;
   color: $basic-white;
   box-sizing: border-box;
-  padding: 40px;
+  padding: 65px 42px 40px 40px;
   display: flex;
   align-items: center;
 
@@ -59,7 +59,7 @@
   font-size: 16px;
   line-height: 20px;
 
-  margin: 48px 0 0;
+  margin: 62px 0 0;
   text-align: center;
 
   @media (min-width: $tablet-min-width) {
