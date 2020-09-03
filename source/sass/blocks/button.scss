@@ -17,6 +17,10 @@
     padding: 10px 12px 9px;
   }
 
+  @media (min-width: $desktop-min-width) {
+    padding: 11px 12px 9px;
+  }
+
   &:hover,
   &:focus {
     background-color: $basic-green-2;
