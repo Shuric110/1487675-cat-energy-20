@@ -51,10 +51,10 @@
   @media (min-width: $tablet-min-width) {
     font-size: 36px;
     line-height: 36px;
-    padding: 0 40px;
+    padding: 0 37px;
 
     &::before {
-      top: 25px;
+      top: 22px;
       left: calc(50% - 50vw);
     }
   }

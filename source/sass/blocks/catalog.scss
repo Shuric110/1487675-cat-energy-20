@@ -12,12 +12,12 @@
 
 .catalog__list {
   list-style: none;
-  margin: 15px 0 0;
 
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap: 24px;
 
+  margin: 15px 0 0;
   padding: 0 0 24px;
   border-bottom: 1px solid $special-grey-2x;
 
@@ -26,8 +26,9 @@
 
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 60px;
-    grid-row-gap: 59px;
+    grid-row-gap: 76px;
 
+    margin-top: 61px;
     padding: 0;
     border-bottom: none;
   }
@@ -61,7 +62,7 @@
   @media (min-width: $tablet-min-width) {
     box-sizing: border-box;
     border: solid 1px $basic-grey;
-    margin-top: 81px;
+    margin-top: 64px;
     padding: 0 36px 39px;
     width: 324px;
   }

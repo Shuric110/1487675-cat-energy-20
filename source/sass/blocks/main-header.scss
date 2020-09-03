@@ -3,11 +3,10 @@
 
   @media (min-width: $tablet-min-width) {
     @include common-wrapper;
-    padding: 24px 0 32px;
+    padding: 24px 0 21px;
 
     display: flex;
     justify-content: space-between;
-    align-items: bottom;
   }
 
   @media (min-width: $desktop-min-width) {
