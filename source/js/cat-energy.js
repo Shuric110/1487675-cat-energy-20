@@ -1,9 +1,65 @@
 'use strict';
 
+const widthMediaQueryTablet = window.matchMedia('(min-width: 768px)');
+const widthMediaQueryDesktop = window.matchMedia('(min-width: 1260px)');
+
+/* Инициализация карты */
+
+const mapElement = document.querySelector('.contacts__map');
+
+if (mapElement) {
+  let map;
+
+  window.initMap = function () {
+    const IconSizes = {
+      MOBILE: {
+        size: [63, 54],
+        offset: [-31, -52]
+      },
+      TABLET: {
+        size: [122, 104],
+        offset: [-61, -101]
+      }
+    };
+
+    const coords = [59.938770, 30.323037];
+    const center = coords.slice();
+
+    if (widthMediaQueryDesktop.matches) {
+      center[1] -= 0.003;
+    }
+
+    map = new ymaps.Map(mapElement, {
+      center: center,
+      zoom: 17
+    });
+
+    const placemarkIconSizes = widthMediaQueryTablet.matches ? IconSizes.TABLET : IconSizes.MOBILE;
+
+    const placemark = new ymaps.Placemark(coords, {
+        balloonContent: 'Cat Energy'
+    }, {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/map-pin.png',
+        iconImageSize: placemarkIconSizes.size,
+        iconImageOffset: placemarkIconSizes.offset
+    });
+
+    map.geoObjects.add(placemark)
+  };
+
+  const yandexMapsApiKey = 'a51e4efa-6d57-4c5d-a0af-19c767ce93c2';
+  const script = document.createElement('script');
+  script.src = 'https://api-maps.yandex.ru/2.1/?apikey=' + yandexMapsApiKey + '&lang=ru_RU&onload=initMap';
+  script.defer = true;
+  document.head.appendChild(script);
+}
+
+
 /* Открытие/закрытие меню в мобильной версии */
 
-let mainNavOpenButton = document.querySelector('.main-header__menu-button');
-let mainNav = document.querySelector('.main-nav');
+const mainNavOpenButton = document.querySelector('.main-header__menu-button');
+const mainNav = document.querySelector('.main-nav');
 
 mainNavOpenButton.classList.remove('main-header__menu-button--no-js');
 mainNav.classList.remove('main-nav--no-js');
@@ -21,7 +77,6 @@ mainNavOpenButton.addEventListener('click', function () {
     return;
   }
 
-  const widthMediaQuery = window.matchMedia('(min-width: 768px)');
   const exampleInnerElement = exampleElement.querySelector('.example__inner');
   const controlPinElement = exampleElement.querySelector('.example__preview-control-pin');
   const beforeButtonElement = exampleElement.querySelector('.example__preview-control-button--before');
@@ -55,7 +110,7 @@ mainNavOpenButton.addEventListener('click', function () {
   };
 
   const updateSliderMode = function () {
-    let newSmoothMode = widthMediaQuery.matches;
+    let newSmoothMode = widthMediaQueryTablet.matches;
     if (newSmoothMode !== smoothMode) {
       smoothMode = newSmoothMode;
       updateSliderPosition();

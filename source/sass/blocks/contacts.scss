@@ -132,21 +132,21 @@
     background-size: contain;
     background-repeat: no-repeat;
 
-    width: 57px;
-    height: 53px;
-    top: 139px;
-    left: calc(50% - 26px);
+    width: 63px;
+    height: 54px;
+    top: 138px;
+    left: calc(50% - 32px);
 
     @media (min-width: $tablet-min-width) {
-      width: 113px;
-      height: 106px;
-      top: 146px;
-      left: calc(50% - 51px);
+      width: 122px;
+      height: 104px;
+      top: 145px;
+      left: calc(50% - 61px);
     }
 
     @media (min-width: $desktop-min-width) {
-      top: 131px;
-      left: calc(50% + 188px);
+      top: 132px;
+      left: calc(50% + 178px);
     }
   }
 }
