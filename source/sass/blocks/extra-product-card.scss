@@ -1,16 +1,17 @@
 .extra-product-card {
-  padding: 13px 0 19px;
+  padding: 13px 0 17px;
 
   @media (min-width: $tablet-min-width) {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    align-items: center;
-    padding: 26px 38px 28px;
+    align-items: flex-start;
+    padding: 26px 37px 28px;
   }
 
   @media (min-width: $desktop-min-width) {
-    padding: 16px 0;
+    align-items: center;
+    padding: 15px 1px 16px;
   }
 }
 
@@ -22,7 +23,8 @@
 
   font-size: 16px;
   line-height: 16px;
-  margin: 0 0 13px 0;
+  margin: 0 0 13px;
+  padding-left: 1px;
 
   @media (min-width: $tablet-min-width) {
     font-size: 20px;
@@ -43,13 +45,12 @@
   @media (min-width: $tablet-min-width) {
     font-size: 16px;
     line-height: 20px;
-    margin: 0;
+    margin: 3px -1px 0 0;
   }
 
   @media (min-width: $desktop-min-width) {
-    width: 286px;
-    margin-right: 22px;
-    margin-left: auto;
+    width: 303px;
+    margin: 8px 22px 0 auto;
   }
 }
 
@@ -72,10 +73,12 @@
 
   @media (min-width: $tablet-min-width) {
     margin-top: 23px;
+    padding-top: 9px;
   }
 
   @media (min-width: $desktop-min-width) {
     width: 244px;
     margin-top: 0;
+    padding-top: 11px;
   }
 }

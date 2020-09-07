@@ -1,23 +1,30 @@
 .about-food {
   @include common-wrapper;
+  padding-top: 2px;
+
+  @media (min-width: $desktop-min-width) {
+    padding-top: 1px;
+  }
 }
 
 .about-food__list {
   list-style: none;
   margin: 0;
-  padding: 5px 0 42px;
 
+  padding: 15px 0 42px;
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap: 20px;
 
   @media (min-width: $tablet-min-width) {
+    padding: 32px 0 59px;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 60px;
-    grid-row-gap: 80px;
+    grid-row-gap: 90px;
   }
 
   @media (min-width: $desktop-min-width) {
+    padding-bottom: 11px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 80px;
   }
@@ -28,7 +35,11 @@
 
   box-sizing: border-box;
   min-height: 60px;
-  padding: 0 0 0 80px;
+  padding: 2px 0 0 80px;
+
+  br {
+    display: none;
+  }
 
   &::before {
     content: "";
@@ -78,7 +89,11 @@
   @media (min-width: $tablet-min-width) {
     width: 245px;
     min-height: 227px;
-    padding: 111px 0 0 0;
+    padding: 113px 0 0 0;
+
+    br {
+      display: inline;
+    }
 
     &::before {
       width: 80px;
@@ -93,11 +108,12 @@
       z-index: -1;
       position: absolute;
       right: 0;
-      top: -35px;
+      top: -39px;
     }
 
     &:nth-child(1)::after {
       content: "1";
+      right: 15px;
     }
 
     &:nth-child(2)::after {
@@ -106,10 +122,12 @@
 
     &:nth-child(3)::after {
       content: "3";
+      right: -2px;
     }
 
     &:nth-child(4)::after {
       content: "4";
+      right: -4px;
     }
   }
 }

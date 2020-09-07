@@ -8,11 +8,11 @@
 
   @media (min-width: $tablet-min-width) {
     padding-top: 0;
-    grid-row-gap: 20px;
+    grid-row-gap: 30px;
   }
 
   @media (min-width: $desktop-min-width) {
-    padding-top: 82px;
+    padding-top: 50px;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 80px;
   }

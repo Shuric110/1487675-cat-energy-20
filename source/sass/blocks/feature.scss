@@ -27,7 +27,7 @@
   &::after {
     content: "";
     position: absolute;
-    left: -10px;
+    left: -8px;
     top: 0;
     width: 70px;
     height: 55px;
@@ -38,23 +38,24 @@
     background-image: url("../img/icon-cat-slim.svg"),
       url("../img/icon-cat-ellipse.svg");
     background-size: 36px 50px, 50px 50px;
-    background-position: 18px 1px, center;
+    background-position: 17px 1px, center;
   }
 
   &--pro::after {
     background-image: url("../img/icon-cat-pro.svg"),
       url("../img/icon-cat-ellipse.svg");
     background-size: 67px 28px, 50px 50px;
-    background-position: 0 13px, center;
+    background-position: 1px 15px, center;
   }
 
   @media (min-width: $tablet-min-width) {
     position: static;
-    padding: 15px 0 24px 0;
+    padding: 24px 0 26px 0;
+    font-size: 36px;
 
     &::after {
       left: auto;
-      right: 25px;
+      right: 26px;
       top: 80px;
       width: 270px;
       height: 223px;
@@ -62,41 +63,51 @@
 
     &--slim::after {
       background-size: 140px 192px, 200px 200px;
-      background-position: 65px 0, center;
+      background-position: 64px 1px, center;
     }
 
     &--pro::after {
       background-size: 268px 112px, 200px 200px;
-      background-position: 0 60px, center;
+      background-position: 0 55px, center;
     }
   }
 
   @media (min-width: $desktop-min-width) {
     position: relative;
-    padding: 15px 0 73px 162px;
+    padding: 24px 0 75px 162px;
 
     &::after {
-      left: -20px;
+      left: -19px;
       right: auto;
-      top: -10px;
-      width: 135px;
+      top: -11px;
+      width: 139px;
       height: 112px;
     }
 
     &--slim::after {
       background-size: 70px 96px, 100px 100px;
-      background-position: 33px 0, center;
+      background-position: 34px 0, center;
     }
 
     &--pro::after {
       background-size: 134px 56px, 100px 100px;
-      background-position: 0 30px, center;
+      background-position: 0 26px, center;
     }
   }
 }
 
 .feature__text {
   margin: 0;
+
+  &--pro {
+    @media (min-width: $tablet-min-width) {
+      padding-right: 38px;
+    }
+
+    @media (min-width: $desktop-min-width) {
+      padding-right: 0;
+    }
+  }
 }
 
 .feature__link {
@@ -108,20 +119,23 @@
 
   font-size: 16px;
   line-height: 16px;
-  margin-top: 23px;
+  margin-top: 22px;
   border-top: 1px solid $special-grey;
-  padding-top: 15px;
+  padding-top: 20px;
+  padding-bottom: 1px;
 
   @media (min-width: $tablet-min-width) {
     font-size: 20px;
     line-height: 30px;
+    margin-top: 0;
     border-top: none;
-    padding-top: none;
-    margin-top: 48px;
+    padding-top: 51px;
+    padding-bottom: 4px;
   }
 
   @media (min-width: $desktop-min-width) {
-    margin-top: 23px;
+    padding-top: 26px;
+    padding-bottom: 6px;
   }
 
   &::after {
@@ -129,12 +143,12 @@
     display: inline-block;
     vertical-align: 2px;
     width: 32px;
-    height: 10px;
+    height: 11px;
     background-repeat: no-repeat;
     background-position: left center;
     background-image: url("../img/icon-right-arrow-long.svg");
 
-    margin-left: 16px;
+    margin-left: 15px;
 
     @media (min-width: $tablet-min-width) {
       margin-left: 26px;

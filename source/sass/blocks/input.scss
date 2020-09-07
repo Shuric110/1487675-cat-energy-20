@@ -4,13 +4,71 @@
   font-size: 16px;
   line-height: 18px;
   color: $special-dark-grey;
-  padding: 13px 15px 14px;
+  padding: 13px 10px 12px 14px;
   border: 1px solid $special-grey-2x;
   text-transform: uppercase;
+  position: relative;
+  min-width: 10px;
 
   @media (min-width: $tablet-min-width) {
     font-size: 20px;
     line-height: 30px;
-    padding: 10px 19px 12px;
+    padding: 10px 19px;
+  }
+
+  &:invalid {
+    border-color: $status-error;
+  }
+
+  &:hover {
+    border-color: $special-grey;
+  }
+
+  &:focus {
+    border-color: $special-dark-grey;
+    fill: $basic-green;
+  }
+
+  &[class*=" input--icon-"] {
+    padding-right: 45px;
+    background-repeat: no-repeat;
+  }
+
+  &--icon-email {
+    background-image: url("../img/icon-mail.svg");
+    background-size: 18px 13px;
+
+    background-position: calc(100% - 15px) center;
+
+    @media (min-width: $tablet-min-width) {
+      background-position: calc(100% - 19px) center;
+    }
+  }
+
+  &--icon-email:invalid:not(:hover) {
+    background-image: url("../img/icon-mail-error.svg");
+  }
+
+  &--icon-email:focus {
+    background-image: url("../img/icon-mail-active.svg");
+  }
+
+  &--icon-phone {
+    background-image: url("../img/icon-phone.svg");
+    background-size: 20px 20px;
+
+    background-position: calc(100% - 13px) center;
+
+    @media (min-width: $tablet-min-width) {
+      background-position: calc(100% - 17px) center;
+    }
+  }
+
+  &--icon-phone:invalid:not(:hover) {
+    background-image: url("../img/icon-phone-error.svg");
+  }
+
+  &--icon-phone:focus {
+    background-image: url("../img/icon-phone-active.svg");
   }
 }

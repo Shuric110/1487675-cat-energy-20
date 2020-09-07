@@ -10,6 +10,10 @@ body {
   padding: 0;
   min-width: $mobile-full-width;
 
+  @media (min-width: $mobile-full-width) {
+    overflow-x: hidden;
+  }
+
   @media (min-width: $tablet-min-width) {
     font-size: 16px;
     line-height: 24px;

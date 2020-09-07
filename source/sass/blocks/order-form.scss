@@ -1,6 +1,6 @@
 @mixin order-form-padding {
   @media (min-width: $tablet-min-width) {
-    padding: 0 35px 0 40px;
+    padding: 0 37px 0 40px;
   }
 
   @media (min-width: $desktop-min-width) {
@@ -9,17 +9,16 @@
 }
 
 .order-form {
-  border-top: 1px solid $special-grey-2x;
-
   font-family: $font-alt;
   color: $basic-black;
 
+  border-top: 1px solid $special-grey-2x;
   font-size: 16px;
   line-height: 18px;
-
   padding: 0 0 32px;
 
   @media (min-width: $tablet-min-width) {
+    border-top: none;
     font-size: 20px;
     line-height: 30px;
     padding-bottom: 72px;
@@ -32,6 +31,15 @@
 
 .order-form__title {
   @include common-wrapper;
+  margin-bottom: 12px;
+
+  @media (min-width: $tablet-min-width) {
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    margin-bottom: 17px;
+  }
 }
 
 .order-form__wrapper {
@@ -41,11 +49,11 @@
 
 .order-form__text {
   text-transform: uppercase;
-  margin: 0;
 
   font-size: 14px;
   line-height: 18px;
   max-width: 230px;
+  margin: 0;
 
   @media (min-width: $tablet-min-width) {
     font-size: 20px;
@@ -55,22 +63,25 @@
 }
 
 .order-form__common {
+  @include order-form-padding;
+
   margin-top: 39px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-row-gap: 27px;
+  grid-row-gap: 23px;
 
   @media (min-width: $tablet-min-width) {
     @include common-wrapper;
-    @include order-form-padding;
 
     grid-row-gap: 72px;
-    margin-top: 66px;
+    margin-top: 65px;
+    margin-bottom: 75px;
   }
 
   @media (min-width: $desktop-min-width) {
     grid-template-columns: 570px 570px;
     grid-column-gap: 80px;
+    margin-bottom: 69px;
   }
 }
 
@@ -88,19 +99,31 @@
 
     @media (min-width: $tablet-min-width) {
       border: 1px solid $special-grey-2x;
-      padding: 25px 28px;
+      padding: 24px 28px;
+    }
+
+    @media (min-width: $desktop-min-width) {
+      padding: 24px 27px;
     }
   }
 
   &--titled {
-    margin-top: 27px;
+    margin-top: 26px;
   }
 }
 
 .order-form__fieldset-legend {
   @include common-wrapper;
   text-transform: none;
-  padding-bottom: 33px;
+  padding-bottom: 32px;
+
+  @media (min-width: $tablet-min-width) {
+    padding-left: 2px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    padding-left: 0;
+  }
 }
 
 .order-form__fieldset-legend br {
@@ -117,7 +140,6 @@
 
   @media (max-width: $mobile-max-width) {
     @include common-wrapper;
-    @include order-form-padding;
   }
 
 
@@ -144,17 +166,22 @@
   &--radiobuttons {
     display: grid;
     grid-template-columns: 1fr;
-    grid-row-gap: 13px;
+    grid-row-gap: 15px;
+
+    @media (min-width: $tablet-min-width) {
+      grid-row-gap: 13px;
+    }
   }
 
   &--checkboxes {
     display: grid;
     grid-template-columns: 1fr;
     grid-row-gap: 12px;
+    margin-top: 3px;
 
     @media (min-width: $tablet-min-width) {
       grid-template-columns: 284px 289px;
-      grid-row-gap: 32px;
+      grid-row-gap: 30px;
       grid-column-gap: 60px;
     }
 
@@ -165,10 +192,41 @@
   }
 }
 
+.order-form__contacts {
+  @media (min-width: $tablet-min-width) {
+    padding-top: 44px;
+    padding-bottom: 39px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    padding-bottom: 41px;
+  }
+}
+
+.order-form__comment {
+  @media (min-width: $tablet-min-width) {
+    padding-top: 44px;
+    padding-bottom: 33px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    padding-bottom: 35px;
+  }
+}
+
+.order-form__extra {
+  @media (min-width: $tablet-min-width) {
+    padding-top: 22px;
+  }
+}
+
+.order-form__fieldlist-item {
+  min-width: 0;
+}
+
 .order-form__label {
   display: flex;
   align-items: baseline;
-  width: 100%;
 
   @media (min-width: $desktop-min-width) {
     width: 570px;
@@ -177,15 +235,22 @@
 
 .order-form__input {
   flex-grow: 1;
-  margin-left: 10px;
+  margin-left: 14px;
+
+  @media (min-width: $tablet-min-width) {
+    margin-left: 18px;
+  }
 }
 
 .order-form__textarea {
   width: 100%;
   height: 150px;
+  margin-top: 3px;
+  margin-bottom: -2px;
 
   @media (min-width: $tablet-min-width) {
-    grid-row-gap: 174px;
+    height: 174px;
+    margin: 0;
   }
 }
 
@@ -193,10 +258,10 @@
   @include common-wrapper;
   @include order-form-padding;
 
-  padding: 34px 0 0;
+  padding: 35px 0 0;
 
   @media (min-width: $tablet-min-width) {
-    padding-top: 54px;
+    padding-top: 52px;
 
     display: flex;
     flex-direction: row;
@@ -204,14 +269,21 @@
   }
 
   @media (min-width: $desktop-min-width) {
-    padding-top: 61px;
+    padding-top: 59px;
   }
 }
 
 .order-form__button {
+  width: 100%;
+
   @media (min-width: $tablet-min-width) {
+    font-size: 20px;
+    line-height: 20px;
+    padding: 16px 15px;
+
     width: 282px;
-    margin-right: 60px;
+    margin-right: 61px;
+    margin-left: 1px;
   }
 
   @media (min-width: $desktop-min-width) {
@@ -225,8 +297,15 @@
   font-size: 14px;
   line-height: 16px;
   margin: 21px 0 0;
+  text-align: center;
 
   @media (min-width: $tablet-min-width) {
-    margin: 0;
+    font-size: 16px;
+    line-height: 16px;
+    margin: 0 0 3px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    margin: 0 0 0 1px;
   }
 }
