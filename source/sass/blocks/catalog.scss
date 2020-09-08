@@ -69,13 +69,14 @@
   @media (min-width: $tablet-min-width) {
     box-sizing: border-box;
     border: solid 1px $basic-grey;
-    margin-top: 73px;
+    margin-top: 65px;
     padding: 0 36px 39px;
     width: 324px;
   }
 
   @media (min-width: $desktop-min-width) {
     width: 245px;
+    margin-top: 73px;
   }
 }
 
@@ -91,13 +92,14 @@
   }
 }
 
-.catalog__more-plus img,
-.catalog__more-plus svg {
+.catalog__more-plus img {
   height: auto;
   fill: $special-grey;
 
   @media (min-width: $tablet-min-width) {
     width: 60px;
+    height: 60px;
+    margin-top: 8px;
   }
 }
 
@@ -132,4 +134,8 @@
     max-width: 175px;
     margin: 0 0 auto;
   }
+}
+
+.catalog__more-button {
+  width: 100%;
 }

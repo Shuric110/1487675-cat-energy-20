@@ -10,9 +10,9 @@ const csso = require("gulp-csso");
 const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
-//const svgSprite = require('gulp-svg-sprite');
 const svgStore = require("gulp-svgstore");
-const uglify = require('gulp-uglify-es').default;
+const uglify = require("gulp-uglify-es").default;
+const htmlmin = require("gulp-htmlmin");
 
 // Styles
 
@@ -76,16 +76,6 @@ exports.webp = createWebp;
 
 const sprite = () => {
   return gulp.src("source/img/**/{logo,icon-}*.svg")
-/*    .pipe(svgSprite({
-      mode: {
-        symbol: {
-          bust: false,
-          render: false,
-          dest: "",
-          sprite: "sprite.svg"
-        }
-      }
-    }))*/
     .pipe(svgStore())
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"))
@@ -116,7 +106,6 @@ const copy = () => {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-//    "source/js/**",
     "source/*.ico"
   ], {
     base: "source"
@@ -134,6 +123,7 @@ const html = () => {
   ], {
     base: "source"
   })
+  .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(gulp.dest("build"));
 };
 
