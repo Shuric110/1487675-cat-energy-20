@@ -126,9 +126,11 @@
   }
 }
 
-.order-form__fieldset-legend br {
+.order-form__contacts h3 {
+  width: 185px;
+
   @media (min-width: $tablet-min-width) {
-    display: none;
+    width: auto;
   }
 }
 

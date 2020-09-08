@@ -51,6 +51,7 @@
   @media (min-width: $desktop-min-width) {
     padding-right: $desktop-content-width - 440px;
     padding-top: 72px;
+    padding-bottom: 50px;
     min-height: 462px;
   }
 }
@@ -340,7 +341,10 @@
 
 .example__preview-control-button--before {
   justify-self: end;
-  margin-right: 5px;
+
+  @media (min-width: $tablet-min-width) {
+    margin-right: 5px;
+  }
 }
 
 .example__preview-control-button--after {

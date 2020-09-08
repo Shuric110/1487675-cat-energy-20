@@ -8,6 +8,28 @@
   font-weight: normal;
   color: $basic-black;
 
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    height: 2px;
+    background-color: $basic-green;
+
+    top: 16px;
+    left: 0;
+    right: calc(50% - 50vw);
+
+    @media (min-width: $tablet-min-width) {
+      top: 22px;
+      left: calc(50% - 50vw);
+    }
+
+    @media (min-width: $desktop-min-width) {
+      left: 0;
+    }
+  }
+
   @media (min-width: $desktop-min-width) {
     &::before {
       content: "";
@@ -33,35 +55,13 @@
   background-color: $basic-white;
   padding: 0 22px 0 0;
 
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    z-index: -1;
-    height: 2px;
-    background-color: $basic-green;
-
-    top: 16px;
-    left: 0;
-    right: calc(50% - 50vw);
-  }
-
   @media (min-width: $tablet-min-width) {
     font-size: 36px;
     line-height: 36px;
     padding: 0 37px;
-
-    &::before {
-      top: 22px;
-      left: calc(50% - 50vw);
-    }
   }
 
   @media (min-width: $desktop-min-width) {
     padding: 0 40px 0 0;
-
-    &::before {
-      left: 0;
-    }
   }
 }

@@ -7,7 +7,7 @@
   @media (min-width: $tablet-min-width) {
     background: linear-gradient(to bottom, $transparent, $transparent 64px, $basic-grey 64px, $basic-grey);
     box-sizing: border-box;
-    padding: 0 37px 40px;
+    padding: 0 37px 42px;
     width: 324px;
   }
 
@@ -25,8 +25,12 @@
 
   @media (min-width: $tablet-min-width) {
     display: block;
-    padding-bottom: 33px;
+    padding-bottom: 31px;
     margin-bottom: auto;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    padding-bottom: 33px;
   }
 }
 

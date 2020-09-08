@@ -80,7 +80,7 @@
           <fieldset class="order-form__contacts order-form__fieldset order-form__fieldset--titled">
             <legend class="order-form__fieldset-legend title-with-line">
               <h3 class="title-with-line__title">
-                Контактные данные<br>
+                Контактные данные
                 (владельца кота)
               </h3>
             </legend>
@@ -88,13 +88,13 @@
               <li class="order-form__fieldlist-item">
                 <label class="order-form__label">
                   E-mail:*
-                  <input class="order-form__input input input--icon-email" type="text" name="email" placeholder="kuklachev@gmail.com" required>
+                  <input class="order-form__input input input--icon-email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
                 </label>
               </li>
               <li class="order-form__fieldlist-item">
                 <label class="order-form__label">
                   Телефон:*
-                  <input class="order-form__input input input--icon-phone" type="text" name="phone" placeholder="8 (960) 900-60-90" required>
+                  <input class="order-form__input input input--icon-phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" pattern="8 \(\d\d\d\) \d\d\d-\d\d-\d\d" required>
                 </label>
               </li>
             </ul>
@@ -107,7 +107,8 @@
             </legend>
             <ul class="order-form__fieldlist order-form__fieldlist--not-wrapped">
               <li class="order-form__fieldlist-item">
-                <textarea class="order-form__textarea input" name="about-cat" placeholder="Расскажите обо всех повадках кота"></textarea>
+                <label class="visually-hidden" for="order-form-about-cat">Дополнительная информация</label>
+                <textarea id="order-form-about-cat" class="order-form__textarea input" name="about-cat" placeholder="Расскажите обо всех повадках кота"></textarea>
               </li>
             </ul>
           </fieldset>
