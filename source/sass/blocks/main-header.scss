@@ -17,7 +17,7 @@
 .main-header__top {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 
   @media (max-width: $mobile-max-width) {
     @include common-wrapper;

@@ -27,8 +27,15 @@
   }
 }
 
-.radio:hover::before,
-.radio:focus::before,
+.radio:hover::before {
+  border-color: $special-grey-3;
+}
+
+input:focus + .radio::before,
+.radio:focus::before {
+  border-color: $special-grey-2;
+}
+
 .radio:active::before {
   border-color: $special-grey-3;
 }

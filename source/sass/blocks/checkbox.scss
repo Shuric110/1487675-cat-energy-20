@@ -26,12 +26,21 @@
   }
 }
 
-.checkbox:hover::before,
-.checkbox:focus::before,
+.checkbox:hover::before {
+  border-color: $special-grey-3;
+}
+
+input:focus + .checkbox::before,
+.checkbox:focus::before {
+  border-color: $special-grey-2;
+}
+
+input:active + .checkbox::before,
 .checkbox:active::before {
   border-color: $special-grey-3;
 }
 
+input:active + .checkbox,
 .checkbox:active {
   opacity: 0.3;
 }

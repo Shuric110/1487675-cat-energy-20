@@ -52,6 +52,10 @@
   border-top: 1px solid $special-grey-2x;
   display: flex;
 
+  &--more {
+    order: 1;
+  }
+
   @media (min-width: $tablet-min-width) {
     padding: 0;
     border-top: none;

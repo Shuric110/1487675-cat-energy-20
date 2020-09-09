@@ -1,14 +1,22 @@
 .input {
   box-sizing: border-box;
   font-family: $font-alt;
-  font-size: 16px;
-  line-height: 18px;
   color: $special-dark-grey;
-  padding: 13px 10px 12px 14px;
   border: 1px solid $special-grey-2x;
   text-transform: uppercase;
   position: relative;
   min-width: 10px;
+  outline: none;
+  box-shadow: none;
+
+  font-size: 16px;
+  line-height: 18px;
+  padding: 13px 10px 12px 14px;
+
+  &::placeholder {
+    color: $special-dark-grey;
+    opacity: 1;
+  }
 
   @media (min-width: $tablet-min-width) {
     font-size: 20px;
@@ -16,9 +24,6 @@
     padding: 10px 19px;
   }
 
-  &:invalid {
-    border-color: $status-error;
-  }
 
   &:hover {
     border-color: $special-grey;
@@ -26,7 +31,15 @@
 
   &:focus {
     border-color: $special-dark-grey;
-    fill: $basic-green;
+    border-width: 2px;
+    padding: 9px 18px;
+  }
+
+  &--invalid,
+  &:focus:invalid {
+    border-color: $status-error;
+    border-width: 2px;
+    padding: 9px 18px;
   }
 
   &[class*=" input--icon-"] {
@@ -45,12 +58,12 @@
     }
   }
 
-  &--icon-email:invalid:not(:hover) {
-    background-image: url("../img/icon-mail-error.svg");
-  }
-
   &--icon-email:focus {
     background-image: url("../img/icon-mail-active.svg");
+  }
+
+  &--icon-email:focus:invalid {
+    background-image: url("../img/icon-mail-error.svg");
   }
 
   &--icon-phone {
@@ -64,11 +77,11 @@
     }
   }
 
-  &--icon-phone:invalid:not(:hover) {
-    background-image: url("../img/icon-phone-error.svg");
-  }
-
   &--icon-phone:focus {
     background-image: url("../img/icon-phone-active.svg");
+  }
+
+  &--icon-phone:focus:invalid {
+    background-image: url("../img/icon-phone-error.svg");
   }
 }

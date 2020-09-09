@@ -102,7 +102,7 @@ mainNavOpenButton.addEventListener('click', function () {
       controlPinElement.offsetWidth;
       imageCropPosition = Math.round(controlPinElement.getBoundingClientRect().left + controlPinElement.offsetWidth / 2
         - imageContainerElement.getBoundingClientRect().left);
-      exampleInnerElement.style.setProperty("--slider-delta", imageCropPosition + 'px');
+      exampleInnerElement.style.setProperty('--slider-delta', imageCropPosition + 'px');
     }
 
     imageBeforeCropElement.style.width = imageCropPosition + 'px';
